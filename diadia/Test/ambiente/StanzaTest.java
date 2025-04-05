@@ -19,8 +19,7 @@ class StanzaTest {
 		//this.stanzaOvest=new Stanza("stanzaOvest",1,0);
 		this.stanzaSud=new Stanza("stanzaSud",1,0);
 		this.stanzaNord=new Stanza("stanzaNord",1,0);
-		this.nuovastanza=new Stanza("suca",0,0);		//crea stanza suca, con 0 direzioni attuali, 0 e 0 attrezzi 
-		
+	
 	}
 	@Test 
 	public void testImpostaStanzaAdiacenteSTANZA_ESISTENTE(){
