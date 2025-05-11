@@ -1,19 +1,8 @@
 package ambiente;
+
 import attrezzi.Attrezzo;
 
-/**
- * Classe Stanza - una stanza in un gioco di ruolo.
- * Una stanza e' un luogo fisico nel gioco.
- * E' collegata ad altre stanze attraverso delle uscite.
- * Ogni uscita e' associata ad una direzione.
- * 
- * @author Scoderoni,Benedetti 
- * @see Attrezzo
- * @version 1.0
-*/
-
-public class Stanza {
-	
+public class StanzaProtected {
 	static final private int NUMERO_MASSIMO_DIREZIONI = 4;
 	static final private int NUMERO_MASSIMO_ATTREZZI = 10;
 	
@@ -22,8 +11,8 @@ public class Stanza {
 	
 	private String nome;					//nome della stanza 
 	
-    private Attrezzo[] attrezzi;			//elenco degli attrezzi presenti
-    private int numeroAttrezzi;				
+    protected Attrezzo[] attrezzi;			//elenco degli attrezzi presenti
+    protected int numeroAttrezzi;				
     
     private Stanza[] stanzeAdiacenti;		//elenco delle stanze adiacenti 
     private int numeroStanzeAdiacenti;
@@ -35,7 +24,7 @@ public class Stanza {
      * @param nome il nome della stanza
      */
    
-	public Stanza(String nome,int stanze,int attrezzi) {			//modifica costruttore generico								
+	public StanzaProtected(String nome,int stanze,int attrezzi) {			//modifica costruttore generico								
         this.nome = nome;
         this.numeroStanzeAdiacenti = stanze;
         this.numeroAttrezzi = attrezzi;
@@ -44,7 +33,7 @@ public class Stanza {
         this.attrezzi = new Attrezzo[NUMERO_MASSIMO_ATTREZZI];
     }
     
-    public Stanza(String nome) {									//costruttore secondario
+    public StanzaProtected(String nome) {									//costruttore secondario
     	this(nome,0,0);
     }
     

@@ -82,5 +82,8 @@ public class Partita {
 	public String toString() {
 		return this.getStanzaCorrente()+"\nCfu= "+this.giocatore.getCfu();
 	}
+	public boolean giocatoreIsVivo() {
+		return this.giocatore.getCfu()>0;
+	}
 
 }

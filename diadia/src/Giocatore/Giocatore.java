@@ -17,7 +17,9 @@ public class Giocatore {
    }
    
    //////////FUNZIONI GETTER////////
-   
+   public String getDescrizione() {
+	   return this.toString();
+   }
   
    public int getCfu() {
        return this.cfu;
@@ -41,5 +43,13 @@ public class Giocatore {
 
    public void setBorsa(Borsa borsa) {
        this.borsa = borsa;
+   }
+   
+   public String toString() {							//stampa le informazioni relative all giocatore 
+	   StringBuilder risultato=new StringBuilder();
+	   risultato.append("Numero di cfu attuale : "+ this.cfu + "\n");			//stampa i cfu attuali
+	   risultato.append("Peso borsa: "+  this.borsa.getPeso()); 	//stampa le informazioni relative alla borsa					 
+	   risultato.append("\n"+this.borsa.toString());				
+	   return risultato.toString();
    }
 }
